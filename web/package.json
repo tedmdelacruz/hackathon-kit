@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/tedmdelacruz/hackathon-kit/issues"
   },
-  "homepage": "https://github.com/tedmdelacruz/hackathon-kit#readme"
+  "homepage": "https://github.com/tedmdelacruz/hackathon-kit#readme",
+  "dependencies": {
+    "vue-cli": "^2.8.2"
+  }
 }
