@@ -4,7 +4,7 @@
   "description": "SPA starter kit for hackathons",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,14 @@
   },
   "homepage": "https://github.com/tedmdelacruz/hackathon-kit#readme",
   "dependencies": {
-    "vue-cli": "^2.8.2"
+    "bootstrap": "4.0.0-beta",
+    "css-loader": "^0.28.4",
+    "jquery": "^3.2.1",
+    "node-sass": "^4.5.3",
+    "popper.js": "^1.11.1",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "vue-cli": "^2.8.2",
+    "webpack": "^3.5.4"
   }
 }

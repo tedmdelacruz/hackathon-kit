@@ -12,7 +12,8 @@ Powered by:
 
 TODO:
 - [x] Setup Django REST Framework Docker image as server
-- [ ] Create /users endpoint
+- [x] Create GET /users endpoint
+- [ ] Add simple registration and login page
 - [ ] Replace SQLite3 with MySQL
 - [ ] Setup React Native and MobX with server
 - [ ] Setup VueJS SPA interacting with server
