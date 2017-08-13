@@ -24,4 +24,9 @@ module.exports = {
             Popper: ['popper.js', 'default'],
         }),
     ],
+    resolve: {
+        alias: {
+            vue: 'vue/dist/vue.js',
+        }
+    }
 };

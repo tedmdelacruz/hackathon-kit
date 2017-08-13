@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/tedmdelacruz/hackathon-kit#readme",
   "dependencies": {
+    "axios": "^0.16.2",
     "bootstrap": "4.0.0-beta",
     "css-loader": "^0.28.4",
     "jquery": "^3.2.1",
