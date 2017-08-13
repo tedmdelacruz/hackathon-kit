@@ -12,6 +12,7 @@ Powered by:
 
 TODO:
 - [x] Setup Django REST Framework Docker image as server
+- [ ] Replace SQLite3 with MySQL
 - [ ] Setup React Native and MobX with server
 - [ ] Setup VueJS SPA interacting with server
 - [ ] Setup Django Admin
