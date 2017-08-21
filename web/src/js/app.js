@@ -6,18 +6,18 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import axios from 'axios';
 
+import Home from './pages/Home.vue';
+import Signup from './pages/Signup.vue';
+import Login from './pages/Login.vue';
+
+const routes = [
+    { path: '/', component: Home },
+    { path: '/signup', component: Signup },
+    { path: '/login', component: Login },
+]
+
+const router = new VueRouter({ routes })
+
 Vue.use(VueRouter);
 
-let app = new Vue({
-    el: '#app',
-    data: {
-        users: []
-    },
-    mounted() {
-        var self = this;
-        axios.get('http://api.localtest.me:8000/users/')
-            .then(response => {
-                self.users = response.data.results;
-            });
-    }
-});
+const app = new Vue({ router }).$mount('#app')

@@ -13,39 +13,10 @@
 
 <body>
 
-    <div class="site-wrapper">
+    <div id="app">
 
-        <div class="site-wrapper-inner">
-
-            <div class="cover-container">
-                <div class="masthead clearfix">
-                    <div class="inner">
-                        <h3 class="masthead-brand">Prototype Kit</h3>
-                        <nav class="nav nav-masthead">
-                          <a class="nav-link active" href="#">Home</a>
-                          <a class="nav-link" href="#">About</a>
-                        </nav>
-                    </div>
-                </div>
-
-                <div class="inner cover">
-                    <h1 class="cover-heading">Prototype Kit</h1>
-                    <p class="lead">This is a starter kit prototyping web applications, APIs, and mobile app ideas.</p>
-                    <p class="lead">
-                        <a href="#!/login" class="btn btn-lg btn-primary">Login</a>
-                        <a href="#!/signup" class="btn btn-lg btn-secondary">Signup</a>
-                    </p>
-                </div>
-
-                <div class="mastfoot">
-                    <div class="inner">
-                        <p><a href="https://protokit.tedmdelacruz.com">Prototype Kit</a> by <a href="https://github.com/tedmdelacruz">Ted Mathew dela Cruz</a>.</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
+        <router-view></router-view>
+        
     </div>
 
     <script src="dist/app.min.js"></script>
