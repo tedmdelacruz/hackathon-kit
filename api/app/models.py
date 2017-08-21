@@ -9,6 +9,6 @@ class User(models.Model):
     username = models.CharField(max_length=24, unique=True)
     password = models.CharField(max_length=64)
     email = models.EmailField()
-    avatar_url = models.TextField()
+    avatar_url = models.TextField(blank=True)
     created_on = models.DateTimeField(auto_now=True)
     status = models.IntegerField(default=STATUS_ACTIVE)
