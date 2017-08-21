@@ -1,5 +1,16 @@
 version: '3'
 services:
+  db:
+    build:
+      context: .
+      dockerfile: Dockerfile.db
+    env_file: .env
+    image: mysql
+    container_name: mysql
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:6033"
   server:
     build: .
     container_name: api
@@ -7,3 +18,5 @@ services:
       - .:/code
     ports:
       - "8000:8000"
+    depends_on: 
+      - db

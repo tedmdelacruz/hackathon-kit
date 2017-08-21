@@ -14,7 +14,7 @@ TODO:
 - [x] Setup Django REST Framework Docker image as server
 - [x] Create GET /users endpoint
 - [ ] Add simple registration and login page
-- [ ] Replace SQLite3 with MySQL
+- [x] Replace SQLite3 with MySQL
 - [ ] Setup React Native and MobX with server
 - [x] Setup VueJS SPA interacting with server
 - [ ] Setup Django Admin
