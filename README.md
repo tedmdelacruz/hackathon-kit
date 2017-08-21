@@ -1,11 +1,11 @@
-# Hackathon Starter Kit
+# Prototype Kit
 
-This starter kit for hackathons is for bootstrapping web applications, APIs, and mobile app ideas.
+This is a starter kit prototyping web applications, APIs, and mobile app ideas.
 
 Powered by:
 * Django
 * Django REST Framework
-* SQLite
+* MySQL
 * React Native
 * MobX
 * VueJS
@@ -19,3 +19,6 @@ TODO:
 - [ ] Setup VueJS SPA interacting with server
 - [ ] Setup Django Admin
 - [ ] Setup Facebook login
+
+**API** http://api.localtest.me:8000
+**Web** http://web.localtest.me:8080

@@ -1,21 +1,22 @@
 {
-  "name": "hackathon-kit-web",
+  "name": "prototype-kit-web",
   "version": "0.0.1",
-  "description": "SPA starter kit for hackathons",
+  "description": "SPA starter kit for prototypes",
   "main": "index.js",
   "scripts": {
-    "start": "npm run"
+    "start": "webpack --watch",
+    "server": "http-server"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tedmdelacruz/hackathon-kit.git"
+    "url": "git+https://github.com/tedmdelacruz/prototype-kit.git"
   },
   "author": "tedmdelacruz",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tedmdelacruz/hackathon-kit/issues"
+    "url": "https://github.com/tedmdelacruz/prototype-kit/issues"
   },
-  "homepage": "https://github.com/tedmdelacruz/hackathon-kit#readme",
+  "homepage": "https://github.com/tedmdelacruz/prototype-kit#readme",
   "dependencies": {
     "axios": "^0.16.2",
     "bootstrap": "4.0.0-beta",

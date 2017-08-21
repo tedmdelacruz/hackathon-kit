@@ -1,19 +1,19 @@
 {
-  "name": "hackathon-kit-client",
+  "name": "prototype-kit-client",
   "version": "0.0.1",
-  "description": "Client starter kit for hackathons",
+  "description": "Client starter kit for prototypes",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tedmdelacruz/hackathon-kit.git"
+    "url": "git+https://github.com/tedmdelacruz/prototype-kit.git"
   },
   "author": "tedmdelacruz",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tedmdelacruz/hackathon-kit/issues"
+    "url": "https://github.com/tedmdelacruz/prototype-kit/issues"
   },
-  "homepage": "https://github.com/tedmdelacruz/hackathon-kit#readme"
+  "homepage": "https://github.com/tedmdelacruz/prototype-kit#readme"
 }
