@@ -16,9 +16,26 @@ TODO:
 - [ ] Add simple registration and login page
 - [ ] Replace SQLite3 with MySQL
 - [ ] Setup React Native and MobX with server
-- [ ] Setup VueJS SPA interacting with server
+- [x] Setup VueJS SPA interacting with server
 - [ ] Setup Django Admin
 - [ ] Setup Facebook login
 
-**API** http://api.localtest.me:8000
-**Web** http://web.localtest.me:8080
+## API
+**URL** http://api.localtest.me:8000
+
+### Setup
+
+```
+docker-compose build
+docker-compose up -d 
+```
+
+## Web
+**URL** http://web.localtest.me:8080
+
+### Setup
+
+```
+npm run start
+npm run server
+```
