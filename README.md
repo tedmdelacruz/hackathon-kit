@@ -27,6 +27,9 @@ TODO:
 ### Setup
 
 ```
+cd api
+mv .env.example .env
+vim .env # Update this
 docker-compose build
 docker-compose up -d 
 ```
