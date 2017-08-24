@@ -13,6 +13,7 @@ Powered by:
 TODO:
 - [x] Setup Django REST Framework Docker image as server
 - [x] Create GET /users endpoint
+- [ ] Consider Dockerizing /web
 - [ ] Use built-in authentication of Django
 - [ ] Add simple registration and login page
 - [x] Replace SQLite3 with MySQL
@@ -40,6 +41,7 @@ docker-compose up -d
 ### Setup
 
 ```
+yarn
 npm run start
 npm run server
 ```
