@@ -26,7 +26,8 @@ SECRET_KEY = '3-43&x3j6++g8%d#-cnx#md7kn#8h(06!pjt+p1$n0m0(*m&u3'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'api.localtest.me'
+    'localhost',
+    'api.localtest.me',
 ]
 
 
