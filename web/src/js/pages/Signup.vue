@@ -11,20 +11,16 @@
                 <h1 class="cover-heading">Create an account</h1>
                 <form action="post" v-on:submit="signup()" onsubmit="return false">
                     <div class="form-group">
-                        <input type="text" class="form-control" id="signup-name" placeholder="Name"
-                            v-model="name">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control" id="signup-email" placeholder="Email"
-                            v-model="email">
-                    </div>
-                    <div class="form-group">
                         <input type="text" class="form-control" id="signup-username" placeholder="Username"
                             v-model="username">
                     </div>
                     <div class="form-group">
                         <input type="password" class="form-control" id="signup-password" placeholder="Password"
                             v-model="password">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="signup-confirm-password" placeholder="Confirm Password"
+                            v-model="confirm_password">
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-lg btn-primary">Submit</button>
@@ -50,8 +46,6 @@
     export default {
         data() {
             return {
-                name: '',
-                email: '',
                 username: '',
                 password: ''
             }
@@ -63,8 +57,6 @@
         methods: {
             signup() {
                 const data = {
-                    name: this.name,
-                    email: this.email,
                     username: this.username,
                     password: this.password
                 }
