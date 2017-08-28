@@ -18,10 +18,10 @@
                         <input type="password" class="form-control" id="signup-password" placeholder="Password"
                             v-model="password">
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <input type="password" class="form-control" id="signup-confirm-password" placeholder="Confirm Password"
                             v-model="confirm_password">
-                    </div>
+                    </div> -->
                     <div class="form-group">
                         <button type="submit" class="btn btn-lg btn-primary">Submit</button>
                     </div>
@@ -64,7 +64,7 @@
                 const baseUrl = constants.api.baseUrl;
 
                 // @TODO Handle signup errors
-                axios.post(baseUrl + '/users/', data)
+                axios.post(baseUrl + '/api/users/', data)
                     .then(response => {
                         // @TODO Handle successful signup
                     })

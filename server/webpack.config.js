@@ -3,10 +3,10 @@ const webpack = require('webpack');
 
 
 module.exports = {
-    entry: './src/js/app.js',
+    entry: './web/static/src/js/app.js',
     output: {
         filename: 'app.min.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'web/static/dist')
     },
     module: {
         rules: [

@@ -57,9 +57,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_WHITELIST = [
-    'localhost:8080',
-    '127.0.0.1:8080',
-    'web.localtest.me:8080'
+    'localhost:8000',
 ]
 
 ROOT_URLCONF = 'prototype_kit.urls'
@@ -67,7 +65,9 @@ ROOT_URLCONF = 'prototype_kit.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            'web/templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -136,6 +136,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "web/static"),
+]
 
 REST_FRAMEWORK = {
     'PAGE_SIZE': 10
