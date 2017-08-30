@@ -13,9 +13,10 @@ class UserViewSet(viewsets.ModelViewSet):
 
     def create(self, request):
         serializer = self.serializer_class(data=request.data)
-        if (serializer.is_valid()):
+
+        if serializer.is_valid():
             serializer.save()
             return Response()
-        else:
-            return Response(serializer.errors,
-                            status=status.HTTP_400_BAD_REQUEST)
+            
+        return Response(serializer.errors,
+                        status=status.HTTP_400_BAD_REQUEST)
