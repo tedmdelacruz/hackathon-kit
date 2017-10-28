@@ -1,0 +1,31 @@
+{% extends "web/base.html" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/static/css/cover.css">
+{% endblock %}
+
+{% block content %}
+    <div class="site-wrapper">
+
+        <div class="site-wrapper-inner">
+
+            <div class="cover-container">
+                
+                <div class="inner cover">
+                    <h1 class="cover-heading">{{ project_name }}</h1>
+                    <hr>
+                    <p class="lead">Lorem ipsum voluptate proident quis.</p>
+                    <a href="/login" class="btn btn-primary">Login</a>
+                    <a href="/signup" class="btn btn-light">Signup</a>
+                </div>
+
+            </div>
+
+        </div>
+        
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="/static/dist/base.min.js"></script>
+{% endblock %}

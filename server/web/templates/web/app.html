@@ -1,22 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="favicon.ico">
-    <title>Prototype Kit</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
-</head>
+{% extends "web/base.html" %}
 
-<body>
-
+{% block content %}
     <div id="app">
-        <h1>Hello</h1>
-        <a href="/logout">Logout</a>
+        <div class="container">
+            <h1>Hello</h1>
+            <a href="/logout">Logout</a>
+        </div>
     </div>
+{% endblock %}
 
+{% block scripts %}
     <script src="/static/dist/app.min.js"></script>
-</body>
-</html>
+{% endblock %}

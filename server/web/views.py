@@ -1,9 +1,8 @@
 from django.shortcuts import render, redirect
+from django.http import HttpResponseForbidden
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
-
-from rest_framework.response import Response
-from rest_framework.decorators import api_view
+from django.conf import settings
 
 
 def app(request):
@@ -12,21 +11,23 @@ def app(request):
     return render(request, 'web/app.html')
 
 
-def landing(request):
+def index(request):
     if request.user.is_authenticated:
         return redirect('app')
-    return render(request, 'web/landing.html')
+    return render(request, 'web/index.html', {'project_name': settings.PROJECT_NAME})
 
 
-@api_view(['POST'])
 def signin(request):
+    if request.method != 'POST':
+        return render(request, 'web/login.html', {'project_name': settings.PROJECT_NAME})
+
     data = request.POST
     user = authenticate(username=data['username'], password=data['password'])
 
     if not user:
         messages.add_message(request, messages.ERROR,
                              'Invalid username or password')
-        return render(request, 'web/landing.html')
+        return redirect('index')
 
     login(request, user)
     return redirect('app')
@@ -34,4 +35,4 @@ def signin(request):
 
 def signout(request):
     logout(request)
-    return redirect('landing')
+    return redirect('index')
