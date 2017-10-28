@@ -3,6 +3,8 @@ ENV PYTHONUNBUFFERED 1
 RUN mkdir /code
 WORKDIR /code
 ADD . /code/
+
 RUN pip install -r requirements.txt
+RUN apt-get update && apt-get install -y netcat
 
 ENTRYPOINT ["/code/bootstrap.sh"]
