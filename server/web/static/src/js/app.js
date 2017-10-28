@@ -1,19 +1,12 @@
-import 'jquery';
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/css/bootstrap-grid.min.css';
+import base from './base'
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import axios from 'axios';
 
-import Home from './pages/Home.vue';
-import Signup from './pages/Signup.vue';
-import Login from './pages/Login.vue';
+import App from './pages/App.vue';
 
 const routes = [
-    { path: '/', component: Home },
-    { path: '/signup', component: Signup },
-    { path: '/login', component: Login },
+    { path: '/', component: App },
 ]
 
 const router = new VueRouter({ routes })

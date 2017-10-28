@@ -9,6 +9,7 @@ Powered by:
 * React Native
 * MobX
 * VueJS
+* Redis
 
 TODO:
 - [x] Setup Django REST Framework Docker image as server
@@ -16,6 +17,7 @@ TODO:
 - [ ] Use built-in authentication of Django
 - [ ] Add simple registration and login page
 - [x] Replace SQLite3 with MySQL
+- [ ] Setup Redis
 - [ ] Setup React Native and MobX with server
 - [x] Setup VueJS SPA interacting with server
 - [ ] Setup Django Admin
@@ -30,7 +32,6 @@ TODO:
 cd api
 mv .env.example .env
 vim .env # Update this
-docker-compose build
 docker-compose up -d 
 ```
 

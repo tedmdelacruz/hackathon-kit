@@ -11,7 +11,12 @@ router.register(r'api/users', api.UserViewSet)
 
 
 urlpatterns = [
-    url(r'^', include(router.urls)),
-    url(r'^web/', web.index),
+    url(r'^$', web.landing, name='landing'),
+    url(r'^app/$', web.app, name='app'),
+    url(r'^login/?$', web.signin, name='login'),
+    url(r'^logout/?$', web.signout, name='logout'),
+
     url(r'^admin/', admin.site.urls),
+
+    # url(r'^', include(router.urls), name='index'),
 ]
