@@ -6,14 +6,14 @@ services:
       dockerfile: Dockerfile.db
     env_file: .env
     image: mysql
-    container_name: mysql
+    container_name: proto_db
     volumes:
       - ./sql:/docker-entrypoint-initdb.d
     ports:
       - "3306:6033"
   server:
     build: .
-    container_name: server
+    container_name: proto_server
     volumes:
       - .:/code
     ports:
