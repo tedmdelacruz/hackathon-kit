@@ -9,8 +9,11 @@ const routes = [
     { path: '/', component: App },
 ]
 
-const router = new VueRouter({ routes })
+const router = new VueRouter({ routes });
 
 Vue.use(VueRouter);
 
-const app = new Vue({ router }).$mount('#app')
+const app = new Vue({ router }).$mount('#app');
+
+// Simple FOUC handling
+document.getElementById('app').style.display = 'block';
