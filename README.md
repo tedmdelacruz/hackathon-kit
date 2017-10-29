@@ -1,6 +1,7 @@
 # Prototype Kit
 
 [![Build Status](https://travis-ci.org/tedmdelacruz/prototype-kit.svg?branch=master)](https://travis-ci.org/tedmdelacruz/prototype-kit)
+
 This is a starter kit for prototyping web applications, APIs, and mobile app ideas.
 
 **Powered by:** 
