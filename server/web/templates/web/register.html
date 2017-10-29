@@ -1,0 +1,63 @@
+{% extends "web/base.html" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/static/css/cover.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+{% endblock %}
+
+{% block content %}
+
+<div class="container login-container">
+    <div class="row">
+        <div class="col-md-6 align-self-center offset-md-3">
+
+            <div class="container">
+                <h1 class="cover-heading">Register</h1>
+                {% include "web/messages.html" %}
+            </div>
+
+            <form action="/register" method="post" autocomplete="off" class="container">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <input type="text" class="form-control" id="signup-first-name"
+                            placeholder="First name" name="first_name" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <input type="text" class="form-control" id="signup-last-name"
+                            placeholder="Last name" name="last_name" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <input type="email" class="form-control" id="signup-email" placeholder="Email"
+                            name="email" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <input type="text" class="form-control" id="signup-username" placeholder="Username"
+                            name="username" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="password" class="form-control" id="signup-password" placeholder="Password"
+                            name="password" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary">Signup</button>
+                    <a href="/login" class="btn">Login</a>
+                    <a href="/" class="btn">Back</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+    <script src="/static/dist/base.min.js"></script>
+{% endblock %}

@@ -2,3 +2,19 @@ a,
 button {
     cursor: pointer;
 }
+
+.login-container,
+.login-container .row {
+    height: 100%;
+}
+
+.messages {
+    list-style: none;
+    padding: 0;
+}
+
+.alert-error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb; 
+}

@@ -14,9 +14,10 @@ urlpatterns = [
     url(r'^$', web.index, name='index'),
 
     url(r'^app/$', web.app, name='app'),
-    
-    url(r'^login/?$', web.signin, name='login'),
-    url(r'^logout/?$', web.signout, name='logout'),
+
+    url(r'^register/?$', web.register, name='register'),
+    url(r'^login/?$', web.login, name='login'),
+    url(r'^logout/?$', web.logout, name='logout'),
 
     url(r'^admin/', admin.site.urls),
 
