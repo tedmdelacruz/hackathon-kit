@@ -4,6 +4,8 @@ services:
   - docker
 
 before_install:
+  - echo "MYSQL_DATABASE=proto_db
+MYSQL_ALLOW_EMPTY_PASSWORD=yes" > server/.env.test
   - docker-compose -f server/docker-compose.yml up -d
 
 script:
