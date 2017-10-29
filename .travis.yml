@@ -11,4 +11,4 @@ before_install:
   - docker-compose -f server/docker-compose.yml up -d
 
 script:
-  - docker exec server ./manage.py test
+  - docker exec proto_server ./manage.py test
