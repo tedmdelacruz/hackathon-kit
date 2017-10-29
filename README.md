@@ -14,8 +14,8 @@ Powered by:
 TODO:
 - [x] Setup Django REST Framework Docker image as server
 - [x] Create GET /users endpoint
-- [ ] Use built-in authentication of Django
-- [ ] Add simple registration and login page
+- [x] Use built-in authentication of Django
+- [x] Add simple registration and login page
 - [x] Replace SQLite3 with MySQL
 - [ ] Setup Redis
 - [ ] Setup React Native and MobX with server
