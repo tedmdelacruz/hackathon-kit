@@ -1,9 +1,9 @@
 notifications:
   email: false
-  
+
 sudo: required
 
-# language: python
+language: python
 
 services:
   - docker
@@ -11,6 +11,8 @@ services:
 before_install:
   - echo "MYSQL_DATABASE=proto_db MYSQL_ALLOW_EMPTY_PASSWORD=yes" > server/.env
   - sudo /etc/init.d/mysql stop
+
+install:
   - docker-compose -f server/docker-compose.yml build
   - docker-compose -f server/docker-compose.yml up -d
 
