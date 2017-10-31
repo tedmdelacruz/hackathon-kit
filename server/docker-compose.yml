@@ -1,19 +1,19 @@
 version: '3'
 services:
   db:
+    container_name: proto_db
     build:
       context: .
       dockerfile: Dockerfile.db
     env_file: .env
     image: mysql
-    container_name: proto_db
     volumes:
       - ./sql:/docker-entrypoint-initdb.d
     ports:
       - "3306:6033"
   server:
-    build: .
     container_name: proto_server
+    build: .
     volumes:
       - .:/code
     ports:
