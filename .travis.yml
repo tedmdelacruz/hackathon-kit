@@ -16,6 +16,7 @@ before_install:
   - sudo /etc/init.d/mysql stop
 
 install:
+  - docker system prune -f
   - docker-compose --project-name proto -f server/docker-compose.yml build --no-cache 
   - docker images
   - docker-compose -f server/docker-compose.yml up -d
