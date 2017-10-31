@@ -7,16 +7,11 @@ from django.conf import settings
 from api.serializers import UserSerializer
 
 
-def app(request):
-    if not request.user.is_authenticated:
-        return redirect('login')
-    return render(request, 'web/app.html')
-
-
 def index(request):
-    if request.user.is_authenticated:
-        return redirect('app')
-    return render(request, 'web/index.html', {'project_name': settings.PROJECT_NAME})
+    tmpl_vars = {'project_name': settings.PROJECT_NAME}
+    if not request.user.is_authenticated:
+        return render(request, 'web/index.html', tmpl_vars)
+    return render(request, 'web/app.html', tmpl_vars)
 
 
 def login(request):
@@ -29,10 +24,10 @@ def login(request):
     if not user:
         messages.add_message(request, messages.ERROR,
                              'Invalid username or password')
-        return redirect('index')
+        return redirect('login')
 
     auth.login(request, user)
-    return redirect('app')
+    return redirect('index')
 
 
 def register(request):

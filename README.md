@@ -5,7 +5,6 @@
 This is a starter kit for prototyping web applications, APIs, and mobile app ideas.
 
 **Powered by:** 
-* Django
 * Django REST Framework
 * MySQL
 * React Native

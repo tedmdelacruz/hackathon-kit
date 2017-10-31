@@ -13,13 +13,11 @@ router.register(r'api/users', api.UserViewSet)
 urlpatterns = [
     url(r'^$', web.index, name='index'),
 
-    url(r'^app/$', web.app, name='app'),
-
     url(r'^register/?$', web.register, name='register'),
     url(r'^login/?$', web.login, name='login'),
     url(r'^logout/?$', web.logout, name='logout'),
 
     url(r'^admin/', admin.site.urls),
-
-    # url(r'^', include(router.urls), name='index'),
 ]
+
+urlpatterns += router.urls
