@@ -145,3 +145,17 @@ STATICFILES_DIRS = [
 REST_FRAMEWORK = {
     'PAGE_SIZE': 10
 }
+
+# Cache
+# https://niwinz.github.io/django-redis/latest/
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://cache:6379/0",
+        "TIMEOUT": 900,
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
+}

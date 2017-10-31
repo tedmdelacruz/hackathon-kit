@@ -11,6 +11,9 @@ services:
       - ./sql:/docker-entrypoint-initdb.d
     ports:
       - "3306:6033"
+  cache:
+    container_name: proto_cache
+    image: redis
   server:
     container_name: proto_server
     build: .

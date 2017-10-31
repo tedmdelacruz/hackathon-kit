@@ -20,7 +20,7 @@ This is a starter kit for prototyping web applications, APIs, and mobile app ide
 - [x] Add simple registration and login page
 - [x] Replace SQLite3 with MySQL
 - [ ] Setup localtest
-- [ ] Setup Redis
+- [x] Setup Redis
 - [ ] Setup React Native and MobX with server
 - [x] Setup VueJS SPA interacting with server
 - [ ] Setup Django Admin
