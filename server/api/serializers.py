@@ -10,5 +10,8 @@ class UserSerializer(serializers.ModelSerializer):
             'is_superuser', 'last_login', 'date_joined')
 
     def create(self, validated_data):
-        return User.objects.create_user(**validated_data)
+        validated_data['is_active'] = True
+        user = User.objects.create_user(**validated_data)
+        return user
+
 
