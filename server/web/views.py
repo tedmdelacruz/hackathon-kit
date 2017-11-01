@@ -9,9 +9,8 @@ from api.serializers import UserSerializer
 
 def index(request):
     tmpl_vars = {'project_name': settings.PROJECT_NAME}
-    if not request.user.is_authenticated:
-        return render(request, 'web/index.html', tmpl_vars)
-    return render(request, 'web/app.html', tmpl_vars)
+    template = 'web/app.html' if request.user.is_authenticated else 'web/index.html'
+    return render(request, template, tmpl_vars)
 
 
 def login(request):
@@ -19,7 +18,8 @@ def login(request):
         return render(request, 'web/login.html', {'project_name': settings.PROJECT_NAME})
 
     data = request.POST
-    user = auth.authenticate(username=data['username'], password=data['password'])
+    user = auth.authenticate(
+        username=data['username'], password=data['password'])
 
     if not user:
         messages.add_message(request, messages.ERROR,
@@ -36,11 +36,13 @@ def register(request):
 
     serializer = UserSerializer(data=request.POST)
     if not serializer.is_valid():
-        messages.add_message(request, messages.ERROR, 'Invalid registration. Please try again.')
+        messages.add_message(request, messages.ERROR,
+                             'Invalid registration. Please try again.')
         return redirect('register')
 
     serializer.save()
-    messages.add_message(request, messages.INFO, 'Successfully registered. Please login to continue.')
+    messages.add_message(request, messages.INFO,
+                         'Successfully registered. Please login to continue.')
     return redirect('login')
 
 
