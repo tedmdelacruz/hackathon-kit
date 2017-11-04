@@ -20,6 +20,9 @@ This is a starter kit for prototyping web applications, APIs, and mobile app ide
 - [x] Replace SQLite3 with MySQL
 - [ ] Setup localtest
 - [x] Setup Redis
+- [ ] Setup Celery
+- [x] Setup websockets support
+- [x] Setup Pub/Sub module
 - [ ] Setup React Native and MobX with server
 - [x] Setup VueJS SPA interacting with server
 - [ ] Setup Django Admin
@@ -29,6 +32,7 @@ This is a starter kit for prototyping web applications, APIs, and mobile app ide
 - [ ] Setup codecov
 - [ ] Setup automated deployment
 - [ ] Deploy on AWS
+- [ ] Setup payment system
 
 ## API
 **URL** http://api.localtest.me:8000
