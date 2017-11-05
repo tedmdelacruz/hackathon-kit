@@ -7,5 +7,10 @@
 {% endblock %}
 
 {% block scripts %}
+    <script>
+        window.app = {
+            PROJECT_NAME: '{{ project_name }}'
+        };
+    </script>
     <script src="/static/dist/app.min.js"></script>
 {% endblock %}

@@ -5,7 +5,7 @@ DB_CONTAINER := proto_db
 SERVER_CONTAINER := proto_server
 DOCKER_COMPOSE_FILE := server/docker-compose.yml
 
-build:
+init:
 	docker-compose -f $(DOCKER_COMPOSE_FILE) --project-name $(PROJECT_NAME) build
 
 up:
@@ -16,6 +16,12 @@ down:
 
 logs:
 	docker logs -f $(SERVER_CONTAINER)
+
+migrate:
+	docker exec $(SERVER_CONTAINER) ./manage.py migrate
+
+superuser:
+	docker exec -it $(SERVER_CONTAINER) ./manage.py createsuperuser
 
 test:
 	docker exec $(SERVER_CONTAINER) ./manage.py test
