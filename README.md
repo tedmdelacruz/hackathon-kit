@@ -18,6 +18,7 @@ This is a starter kit for prototyping web applications, APIs, and mobile app ide
 - [x] Use built-in authentication of Django
 - [x] Add simple registration and login page
 - [x] Replace SQLite3 with MySQL
+- [ ] Setup multi-level authorization
 - [ ] Setup localtest
 - [x] Setup Redis
 - [ ] Setup Celery

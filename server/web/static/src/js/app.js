@@ -16,11 +16,17 @@ const router = new VueRouter({ routes });
 Vue.use(Vuex);
 const store = new Vuex.Store({
     state: {
-        users: []
+        usersTable: {
+            data: [],
+            isCreateMode: false,
+        }
     },
     mutations: {
         receiveUsers (state, users) {
-            state.users = users;
+            state.usersTable.data = users;
+        },
+        toggleUserCreateMode (state) {
+            state.usersTable.isCreateMode = !state.usersTable.isCreateMode;
         },
     }
 });
