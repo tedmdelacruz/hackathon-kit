@@ -16,7 +16,7 @@
         <td v-if="this.$store.state.usersTable.isCreateMode">
             <input type="checkbox" class="table-input" name="status" checked="checked">
         </td>
-        <td v-if="this.$store.state.usersTable.isCreateMode">
+        <td v-if="this.$store.state.usersTable.isCreateMode" style="white-space:nowrap">
             <button class="table-button">Save</button>
             <button class="table-button" v-on:click="toggleCreateMode">Cancel</button>
         </td>

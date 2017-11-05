@@ -18,7 +18,7 @@
                 <td>
                     {{ user.is_active ? 'Active' : 'Inactive' }}
                 </td>
-                <td>-</td>
+                <td></td>
             </tr>
             <create-user-row></create-user-row>
         </tbody>
