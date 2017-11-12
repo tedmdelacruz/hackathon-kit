@@ -21,10 +21,6 @@
                     </td>
                     <td></td>
                 </tr>
-            </tbody>
-        </table>
-        <table class="table table-condensed table-dark table-hover">
-            <tbody>
                 <create-user-row></create-user-row>
             </tbody>
         </table>
