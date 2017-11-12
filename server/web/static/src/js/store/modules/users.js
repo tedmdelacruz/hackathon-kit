@@ -1,20 +1,24 @@
 const state = {
-    usersTable: {
-        data: [],
-        isCreateMode: false,
-    }
+    data: [],
+    isCreateMode: false,
+}
+
+const getters = {
+    getUsers: state => state.users.data,
+    isCreateMode: state => state.users.isCreateMode,
 }
 
 const mutations = {
     receiveUsers (state, users) {
-        state.usersTable.data = users
+        state.data = users
     },
     toggleUserCreateMode (state) {
-        state.usersTable.isCreateMode = !state.usersTable.isCreateMode
+        state.isCreateMode = !state.usersTable.isCreateMode
     },
 }
 
 export default {
     state,
+    getters,
     mutations,
 }
