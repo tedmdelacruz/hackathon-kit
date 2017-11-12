@@ -19,6 +19,7 @@ This is a starter kit for prototyping web applications, APIs, and mobile app ide
 - [x] Add simple registration and login page
 - [x] Replace SQLite3 with MySQL
 - [ ] Setup multi-level authorization
+- [ ] Create GET /listings endpoint
 - [ ] Setup localtest
 - [x] Setup Redis
 - [ ] Setup Celery
