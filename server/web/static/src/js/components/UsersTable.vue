@@ -10,7 +10,7 @@
                 <th></th>
             </thead>
             <tbody>
-                <tr v-for="user in this.$store.state.usersTable.data"
+                <tr v-for="user in users"
                     v-bind:class="{ 'text-secondary': !user.is_active }">
                     <td>{{ user.first_name }}</td> 
                     <td>{{ user.last_name }}</td> 
@@ -28,10 +28,16 @@
 </template>
 
 <script>
-    import axios from 'axios';
+    import axios from 'axios'
+    import { mapGetters } from 'vuex'
     import CreateUserRow from './CreateUserRow.vue'
 
     export default {
+        computed: {
+            ...mapGetters({
+                users: 'getUsers'
+            })
+        },
         components: {
             CreateUserRow
         },
@@ -44,7 +50,7 @@
             }
         },
         beforeMount() {
-            this.get();
+            this.get()
         }
-    };
+    }
 </script>

@@ -20,6 +20,10 @@
   "homepage": "https://github.com/tedmdelacruz/prototype-kit#readme",
   "dependencies": {
     "axios": "^0.16.2",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
     "bootstrap": "4.0.0-beta.2",
     "css-loader": "^0.28.4",
     "jquery": "^3.2.1",

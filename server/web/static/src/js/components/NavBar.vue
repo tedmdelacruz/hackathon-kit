@@ -31,5 +31,5 @@
                 projectName: window.app.PROJECT_NAME
             }
         }
-    };
+    }
 </script>
