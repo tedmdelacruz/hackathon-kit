@@ -1,7 +1,7 @@
 version: '3'
 services:
   db:
-    container_name: proto_db
+    container_name: db
     build:
       context: .
       dockerfile: Dockerfile.db
@@ -12,10 +12,10 @@ services:
     ports:
       - "3306:6033"
   cache:
-    container_name: proto_cache
+    container_name: cache
     image: redis
-  server:
-    container_name: proto_server
+  web:
+    container_name: web
     build: .
     volumes:
       - .:/code

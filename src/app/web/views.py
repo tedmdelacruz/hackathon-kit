@@ -1,10 +1,10 @@
-from django.shortcuts import render, redirect
-from django.http import HttpResponseForbidden
-from django.contrib import messages
-from django.contrib import auth
 from django.conf import settings
+from django.contrib import auth
+from django.contrib import messages
+from django.http import HttpResponseForbidden
+from django.shortcuts import render, redirect
 
-from api.serializers import UserSerializer
+from app.api.serializers import UserSerializer
 
 
 def index(request):
