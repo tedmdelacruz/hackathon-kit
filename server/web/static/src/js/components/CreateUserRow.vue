@@ -34,7 +34,7 @@
     </tr>
 </template>
 <script>
-    import axios from 'axios';
+    import axios from 'axios'
 
     export default {
         data: () => {
@@ -48,16 +48,16 @@
         },
         methods: {
             toggleCreateMode() {
-                this.$store.commit('toggleUserCreateMode');
+                this.$store.commit('toggleUserCreateMode')
             },
             create() {
-                this.$store.commit('toggleUsersTableLoading');
+                this.$store.commit('toggleUsersTableLoading')
                 axios.post('/api/users', this.data)
                     .then(response => {
-                        this.$store.commit('getUsers');
-                        this.$store.commit('toggleUsersTableLoading');
-                    });
+                        this.$store.commit('getUsers')
+                        this.$store.commit('toggleUsersTableLoading')
+                    })
             }
         }
-    };
+    }
 </script>
