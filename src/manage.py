@@ -1,9 +1,16 @@
 #!/usr/bin/env python
 import os
+from os.path import join, dirname, isfile
 import sys
 
+
+dotenv_path = join(dirname(__file__), '.env')
+if isfile(dotenv_path):
+    import dotenv
+    dotenv.load_dotenv(dotenv_path)
+
 if __name__ == "__main__":
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "prototype_kit.settings")
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
     try:
         from django.core.management import execute_from_command_line
     except ImportError:

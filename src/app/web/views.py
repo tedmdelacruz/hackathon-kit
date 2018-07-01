@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.contrib import auth
 from django.conf import settings
 
-from api.serializers import UserSerializer
+from app.api.serializers import UserSerializer
 
 
 def index(request):
