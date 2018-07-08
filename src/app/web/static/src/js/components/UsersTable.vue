@@ -37,9 +37,9 @@
         },
         methods: {
             get() {
-                axios.get('/api/users')
+                axios.get('/api/users/')
                     .then(response => {
-                        this.$store.commit('receiveUsers', response.data.results)
+                        this.$store.commit('receiveUsers', response.data)
                     })
             }
         },

@@ -1,60 +1,30 @@
-# Prototype Kit
+# Django Kit
 
-[![Build Status](https://travis-ci.org/tedmdelacruz/prototype-kit.svg?branch=master)](https://travis-ci.org/tedmdelacruz/prototype-kit)
-
-This is a starter kit for prototyping web applications, APIs, and mobile app ideas.
+This is my personal starter kit for prototyping Django Progressive Web Apps
 
 **Powered by:** 
-* Django REST Framework
+* Django 2
 * MySQL
-* React Native
-* MobX
-* VueJS
 * Redis
-
-**TODO:**
-- [x] Setup Django REST Framework Docker image as server
-- [x] Create GET /users endpoint
-- [x] Use built-in authentication of Django
-- [x] Add simple registration and login page
-- [x] Replace SQLite3 with MySQL
-- [ ] Setup multi-level authorization
-- [ ] Create GET /listings endpoint
-- [ ] Setup localtest
-- [x] Setup Redis
-- [ ] Setup Celery
-- [x] Setup websockets support
-- [x] Setup Pub/Sub module
-- [ ] Setup React Native and MobX with server
-- [x] Setup VueJS SPA interacting with server
-- [ ] Setup Django Admin
-- [ ] Setup Facebook login
-- [ ] Setup unit tests
-- [ ] Setup Travis CI
-- [ ] Setup codecov
-- [ ] Setup automated deployment
-- [ ] Deploy on AWS
-- [ ] Setup payment system
-
-## API
-**URL** http://api.localtest.me:8000
+* Vue
 
 ### Setup
 
 ```
-cd api
+cd src
 mv .env.example .env
 vim .env # Update this
+docker-compose build
 docker-compose up -d 
-```
 
-## Web
-**URL** http://web.localtest.me:8080
-
-### Setup
-
-```
 yarn
-npm run start
-npm run server
+npm run start/build
+```
+
+### Debugging with ipdb
+
+Stop `web` container then run
+
+```sh
+docker-compose run --service-ports web
 ```

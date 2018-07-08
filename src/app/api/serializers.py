@@ -6,8 +6,20 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ('id', 'username', 'email', 'first_name', 'last_name', 'is_staff', 'is_active',
-            'is_superuser', 'last_login', 'date_joined')
+
+        fields = (
+            'id',
+            'username',
+            'password',
+            'email',
+            'first_name',
+            'last_name',
+            'is_staff',
+            'is_active',
+            'is_superuser',
+            'last_login',
+            'date_joined'
+        )
 
     def create(self, validated_data):
         validated_data['is_active'] = True
