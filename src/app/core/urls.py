@@ -2,8 +2,8 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from rest_framework import routers
 
-from api import views as api
-from web import views as web
+from app.api import views as api
+from app.web import views as web
 
 
 router = routers.DefaultRouter()
