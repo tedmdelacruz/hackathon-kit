@@ -1,15 +1,16 @@
 const path = require('path');
 const webpack = require('webpack');
-
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
+    mode: 'development',
     entry: {
-        app: './web/static/src/js/app.js',
-        base: './web/static/src/js/base.js'
+        app: './app/web/static/src/js/app.js',
+        base: './app/web/static/src/js/base.js'
     },
     output: {
         filename: '[name].min.js',
-        path: path.resolve(__dirname, 'web/static/dist')
+        path: path.resolve(__dirname, './app/web/static/dist')
     },
     module: {
         rules: [
@@ -30,6 +31,7 @@ module.exports = {
             jquery: 'jquery',
             Popper: ['popper.js', 'default'],
         }),
+        new VueLoaderPlugin(),
     ],
     resolve: {
         alias: {
