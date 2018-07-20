@@ -18,6 +18,7 @@ urlpatterns = [
     url(r'^logout/?$', web.logout, name='logout'),
 
     url(r'^admin/', admin.site.urls),
+    url('', include('pwa.urls')),
 ]
 
 urlpatterns += router.urls

@@ -36,6 +36,7 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
+    'pwa',
     'rest_framework',
     'corsheaders',
     'django.contrib.admin',
@@ -160,3 +161,20 @@ CACHES = {
         }
     }
 }
+
+
+# Service Worker
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'app/web/static', 'sw.js')
+
+# Manifest
+PWA_APP_NAME = 'Project Name Here'
+PWA_APP_DESCRIPTION = "Eiusmod reprehenderit reprehenderit do irure ad est in cillum enim in ullamco commodo non consequat ea esse."
+PWA_APP_THEME_COLOR = '#fff'
+PWA_APP_DISPLAY = 'standalone'
+PWA_APP_START_URL = '/'
+PWA_APP_ICONS = [
+    {
+        'src': '/static/images/some-icon.png',
+        'sizes': '160x160'
+    }
+]
