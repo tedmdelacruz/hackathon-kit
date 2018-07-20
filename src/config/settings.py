@@ -167,7 +167,7 @@ CACHES = {
 PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'app/web/static', 'sw.js')
 
 # Manifest
-PWA_APP_NAME = 'Project Name Here'
+PWA_APP_NAME = PROJECT_NAME
 PWA_APP_DESCRIPTION = "Eiusmod reprehenderit reprehenderit do irure ad est in cillum enim in ullamco commodo non consequat ea esse."
 PWA_APP_THEME_COLOR = '#fff'
 PWA_APP_DISPLAY = 'standalone'
