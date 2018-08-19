@@ -2,6 +2,8 @@
 
 This is my personal starter kit for prototyping Django Progressive Web Apps
 
+**_Discontinued_** I decided to just use [https://cookiecutter-django.readthedocs.io/en/latest/](cookie-cutter-django) which is much better
+
 **Powered by:** 
 * Django 2
 * MySQL
